@@ -1,0 +1,32 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "arrow-parens": false,
+    // We want to allow guard clauses
+    // Read more here: https://refactoring.com/catalog/replaceNestedConditionalWithGuardClauses.html
+    "curly": [
+      true,
+      "ignore-same-line"
+    ],
+    "max-line-length": false,
+    "no-empty-interface": false,
+    "no-var-requires": false,
+    "ordered-imports": {
+      "options": {
+        "import-sources-order": "any",
+        "named-imports-order": "any"
+      }
+    },
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "trailing-comma": [
+      true,
+      {
+        "singleline": "never",
+        "multiline": "never"
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+<div class="cc-calendar-handler">
+    <input type="radio" id="front" name="face" checked>
+    <label for="front">Front</label>
+
+    <input type="radio" id="back" name="face">
+    <label for="back">Back</label>
+
+    <input type="radio" id="top" name="face">
+    <label for="top">Top</label>
+
+    <input type="radio" id="bottom" name="face">
+    <label for="bottom">Bottom</label>
+
+    <input type="radio" id="left" name="face">
+    <label for="left">Left</label>
+
+    <input type="radio" id="right" name="face">
+    <label for="right">Right</label>
+
+  <div class="view-3d">
+    <div class="cube-3d">
+      <div class="pane top">
+        <cc-calendar-form on-created="$ctrl.onCreated"></cc-calendar-form>
+      </div>
+      <div class="pane bottom">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus dolor doloremque doloribus dolorum
+        explicabo facilis pariatur, quidem.
+      </div>
+      <div class="pane front">
+        <cc-events-items events="$ctrl.events[0]"></cc-events-items>
+      </div>
+      <div class="pane left">
+        <cc-events-items events="$ctrl.events[1]"></cc-events-items>
+      </div>
+      <div class="pane right">
+        <cc-events-items events="$ctrl.events[2]"></cc-events-items>
+      </div>
+      <div class="pane back">
+        <cc-events-items events="$ctrl.events[3]"></cc-events-items>
+      </div>
+    </div>
+  </div>
+</div>

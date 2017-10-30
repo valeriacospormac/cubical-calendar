@@ -1,0 +1,11 @@
+<div class="calendar-form">
+  <form ng-submit="$ctrl.createEvent()">
+    <input type="date" ng-model="$ctrl.timestamp" required>
+    <br>
+    <input type="text" ng-model="$ctrl.title" placeholder="Title" required>
+    <br>
+    <textarea cols="30" rows="4" ng-model="$ctrl.content" placeholder="Content" required></textarea>
+    <br>
+    <input type="submit" value="Add Event">
+  </form>
+</div>

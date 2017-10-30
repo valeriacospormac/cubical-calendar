@@ -1,0 +1,68 @@
+.cc-calendar-handler {
+  height: 100vh;
+  overflow-y: hidden;
+  .view-3d {
+    margin: 5%;
+    width: 250px;
+    height: 250px;
+    perspective: 1000px;
+    padding: 50px;
+    .cube-3d {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: all 0.5s ease-in-out;
+      .pane {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        background-color: lightblue;
+        //opacity: 0.8;
+      }
+      .front {
+        transform: translate3d(0, 0, 125px);
+        z-index: 2;
+      }
+      .back {
+        transform: rotateY(180deg) translate3d(0, 0, 125px);
+      }
+      .left {
+        transform: rotateY(-90deg) translate3d(0, 0, 125px);
+      }
+      .right {
+        transform: rotateY(90deg) translate3d(0, 0, 125px);
+      }
+      .top {
+        transform: rotateX(90deg) translate3d(0, 0, 125px);
+      }
+      .bottom {
+        transform: rotateX(-90deg) translate3d(0, 0, 125px);
+      }
+    }
+  }
+  #front:checked ~ .view-3d ~ .cube-3d {
+    transform: rotateY(0deg);
+  }
+
+  #left:checked ~ .view-3d .cube-3d {
+    transform: rotateY(90deg);
+  }
+
+  #right:checked ~ .view-3d .cube-3d {
+    transform: rotateY(-90deg);
+  }
+
+  #bottom:checked ~ .view-3d .cube-3d {
+    transform: rotateX(90deg);
+  }
+
+  #top:checked ~ .view-3d .cube-3d {
+    transform: rotateX(-90deg);
+  }
+
+  #back:checked ~ .view-3d .cube-3d {
+    transform: rotateY(180deg);
+  }
+}
