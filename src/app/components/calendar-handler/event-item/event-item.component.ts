@@ -3,7 +3,7 @@ import {EventItemController} from './event-item.controller';
 
 export const EventItemComponent: IComponentOptions = {
   bindings: {
-    event: '<'
+    eventItem: '<'
   },
   controller: EventItemController,
   template: require('./event-item.html')
