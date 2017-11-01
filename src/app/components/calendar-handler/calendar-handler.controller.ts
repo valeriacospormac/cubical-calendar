@@ -7,6 +7,7 @@ export class CalendarHandlerController implements IController {
   constructor(public calendarService: ICalendarService) {
     'ngInject';
     this.onCreated = this.onCreated.bind(this);
+    this.onDeleted = this.onDeleted.bind(this);
     this.onEdited = this.onEdited.bind(this);
   }
 
@@ -18,6 +19,11 @@ export class CalendarHandlerController implements IController {
     this.calendarService.setEvents(this.events);
   }
   public onEdited(eventItem: IEvent) {
+    this.calendarService.setEvents(this.events);
+  }
+  public onDeleted(eventItem: IEvent) {
+    const indexOfEvent = this.events.findIndex(e => e.timestamp === eventItem.timestamp);
+    this.events.splice(indexOfEvent, 1)
     this.calendarService.setEvents(this.events);
   }
 }

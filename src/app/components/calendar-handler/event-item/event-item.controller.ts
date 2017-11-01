@@ -8,6 +8,7 @@ export class EventItemController implements IController {
     title: string
   };
   public onEdited: (eventItem: IEvent) => void;
+  public onDeleted: (eventItem: IEvent) => void;
 
   constructor() {
     'ngInject';
@@ -15,5 +16,8 @@ export class EventItemController implements IController {
 
   public editEvent() {
     this.onEdited(this.eventItem);
+  }
+  public deleteEvent() {
+    this.onDeleted(this.eventItem);
   }
 }
