@@ -1,11 +1,11 @@
 <div class="event-item">
   <form ng-submit="$ctrl.editEvent()">
     <label>Timestamp:</label>
-    <input type="text" value="{{$ctrl.eventItem.timestamp}}">
+    <input type="text" value="{{$ctrl.eventItem.timestamp}}" ng-model="$ctrl.eventItem.timestamp">
     <label>Title:</label>
-    <input type="text" value="{{$ctrl.eventItem.title}}">
+    <input type="text" value="{{$ctrl.eventItem.title}}" ng-model="$ctrl.eventItem.title">
     <label>Content:</label>
-    <input type="text" value="{{$ctrl.eventItem.content}}">
+    <input type="text" value="{{$ctrl.eventItem.content}}" ng-model="$ctrl.eventItem.content">
     <input type="submit" value="">
   </form>
 </div>
