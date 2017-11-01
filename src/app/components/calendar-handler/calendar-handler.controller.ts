@@ -23,7 +23,7 @@ export class CalendarHandlerController implements IController {
   }
   public onDeleted(eventItem: IEvent) {
     const indexOfEvent = this.events.findIndex(e => e.timestamp === eventItem.timestamp);
-    this.events.splice(indexOfEvent, 1)
+    this.events.splice(indexOfEvent, 1);
     this.calendarService.setEvents(this.events);
   }
 }

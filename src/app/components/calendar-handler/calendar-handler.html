@@ -1,4 +1,5 @@
 <div class="cc-calendar-handler">
+  <div class="cc-calendar-handler-content">
     <input type="radio" id="front" name="face" checked>
     <label for="front">Front</label>
 
@@ -17,26 +18,31 @@
     <input type="radio" id="right" name="face">
     <label for="right">Right</label>
 
-  <div class="view-3d">
-    <div class="cube-3d">
-      <div class="pane top">
-        <cc-calendar-form on-created="$ctrl.onCreated"></cc-calendar-form>
-      </div>
-      <div class="pane bottom">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus dolor doloremque doloribus dolorum
-        explicabo facilis pariatur, quidem.
-      </div>
-      <div class="pane front">
-        <cc-event-item event-item="$ctrl.events[0]" on-edited="$ctrl.onEdited" on-deleted="$ctrl.onDeleted"></cc-event-item>
-      </div>
-      <div class="pane left">
-        <cc-event-item event-item="$ctrl.events[1]" on-edited="$ctrl.onEdited" on-deleted="$ctrl.onDeleted"></cc-event-item>
-      </div>
-      <div class="pane right">
-        <cc-event-item event-item="$ctrl.events[2]" on-edited="$ctrl.onEdited" on-deleted="$ctrl.onDeleted"></cc-event-item>
-      </div>
-      <div class="pane back">
-        <cc-event-item event-item="$ctrl.events[3]" on-edited="$ctrl.onEdited" on-deleted="$ctrl.onDeleted"></cc-event-item>
+    <div class="view-3d">
+      <div class="cube-3d">
+        <div class="pane top">
+          <cc-calendar-form on-created="$ctrl.onCreated"></cc-calendar-form>
+        </div>
+        <div class="pane bottom">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus dolor doloremque doloribus dolorum
+          explicabo facilis pariatur, quidem.
+        </div>
+        <div class="pane front">
+          <cc-event-item event-item="$ctrl.events[0]" on-edited="$ctrl.onEdited"
+                         on-deleted="$ctrl.onDeleted"></cc-event-item>
+        </div>
+        <div class="pane left">
+          <cc-event-item event-item="$ctrl.events[1]" on-edited="$ctrl.onEdited"
+                         on-deleted="$ctrl.onDeleted"></cc-event-item>
+        </div>
+        <div class="pane right">
+          <cc-event-item event-item="$ctrl.events[2]" on-edited="$ctrl.onEdited"
+                         on-deleted="$ctrl.onDeleted"></cc-event-item>
+        </div>
+        <div class="pane back">
+          <cc-event-item event-item="$ctrl.events[3]" on-edited="$ctrl.onEdited"
+                         on-deleted="$ctrl.onDeleted"></cc-event-item>
+        </div>
       </div>
     </div>
   </div>
