@@ -18,6 +18,6 @@ export class CalendarHandlerController implements IController {
     this.calendarService.setEvents(this.events);
   }
   public onEdited(eventItem: IEvent) {
-    console.log(eventItem);
+    this.calendarService.setEvents(this.events);
   }
 }
