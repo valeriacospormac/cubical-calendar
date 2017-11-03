@@ -1,47 +1,50 @@
 <div class="cc-calendar-handler">
   <div class="cc-calendar-handler-content">
-    <input type="radio" id="front" name="face" checked>
-    <label for="front">Front</label>
 
-    <input type="radio" id="back" name="face">
-    <label for="back">Back</label>
-
-    <input type="radio" id="top" name="face">
+    <input type="radio" id="top" name="face" ng-model="face" value="top">
     <label for="top">Top</label>
 
-    <input type="radio" id="bottom" name="face">
+    <input type="radio" id="bottom" name="face" ng-model="face" value="bottom">
     <label for="bottom">Bottom</label>
 
-    <input type="radio" id="left" name="face">
+    <input type="radio" id="front" name="face" ng-model="face" value="front">
+    <label for="front">Front</label>
+
+    <input type="radio" id="back" name="face" ng-model="face" value="back">
+    <label for="back">Back</label>
+
+    <input type="radio" id="left" name="face" ng-model="face" value="left">
     <label for="left">Left</label>
 
-    <input type="radio" id="right" name="face">
+    <input type="radio" id="right" name="face" ng-model="face" value="right">
     <label for="right">Right</label>
 
     <div class="view-3d">
       <div class="cube-3d">
         <div class="pane top">
-          <cc-calendar-form on-created="$ctrl.onCreated"></cc-calendar-form>
+          <cc-calendar-form on-created="$ctrl.onCreated" ng-if="face == 'top'"></cc-calendar-form>
         </div>
         <div class="pane bottom">
+          <div ng-if="face == 'bottom'">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus dolor doloremque doloribus dolorum
           explicabo facilis pariatur, quidem.
+          </div>
         </div>
         <div class="pane front">
           <cc-event-item event-item="$ctrl.events[0]" on-edited="$ctrl.onEdited"
-                         on-deleted="$ctrl.onDeleted"></cc-event-item>
-        </div>
-        <div class="pane left">
-          <cc-event-item event-item="$ctrl.events[1]" on-edited="$ctrl.onEdited"
-                         on-deleted="$ctrl.onDeleted"></cc-event-item>
-        </div>
-        <div class="pane right">
-          <cc-event-item event-item="$ctrl.events[2]" on-edited="$ctrl.onEdited"
-                         on-deleted="$ctrl.onDeleted"></cc-event-item>
+                         on-deleted="$ctrl.onDeleted" ng-if="face == 'front'"></cc-event-item>
         </div>
         <div class="pane back">
           <cc-event-item event-item="$ctrl.events[3]" on-edited="$ctrl.onEdited"
-                         on-deleted="$ctrl.onDeleted"></cc-event-item>
+                         on-deleted="$ctrl.onDeleted" ng-if="face == 'back'"></cc-event-item>
+        </div>
+        <div class="pane left">
+          <cc-event-item event-item="$ctrl.events[1]" on-edited="$ctrl.onEdited"
+                         on-deleted="$ctrl.onDeleted" ng-if="face == 'left'"></cc-event-item>
+        </div>
+        <div class="pane right">
+          <cc-event-item event-item="$ctrl.events[2]" on-edited="$ctrl.onEdited"
+                         on-deleted="$ctrl.onDeleted" ng-if="face == 'right'"></cc-event-item>
         </div>
       </div>
     </div>
