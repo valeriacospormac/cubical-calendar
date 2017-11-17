@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 .cc-calendar-handler {
   background: url(./images/time.jpg) no-repeat center center fixed;
   background-size: cover;
@@ -8,6 +10,48 @@
     color: white;
     height: 100vh;
     overflow-y: hidden;
+    perspective: 76em;
+    perspective-origin: 50% 50px;
+    .radio-input {
+      display: none;
+    }
+    .tab {
+      position: absolute;
+      margin-top: 50px;
+      left: 400px;
+      width: 200px;
+      height: 50px;
+      color: #fff;
+      font-size: 20px;
+      line-height: 70px;
+      font-weight: 300;
+
+      &:nth-child(2) {
+        top: 50px;
+        background-color: #73afad;
+      }
+      &:nth-child(4) {
+        top: 100px;
+        background-color: #568d8a;
+      }
+      &:nth-child(6) {
+        top: 150px;
+        background-color: #a2ab58;
+      }
+      &:nth-child(8) {
+        top: 200px;
+        background-color: #005a31;
+      }
+      &:nth-child(10) {
+        top: 250px;
+        background-color: #4a96ad;
+      }
+      &:nth-child(12) {
+        top: 300px;
+        background-color: #67bcdb;
+      }
+    }
+
     .view-3d {
       margin: 5%;
       width: 250px;
@@ -30,21 +74,28 @@
         .front {
           transform: translate3d(0, 0, 125px);
           z-index: 2;
+          background-color: #a2ab58;
         }
         .back {
           transform: rotateY(180deg) translate3d(0, 0, 125px);
+          background-color: #005a31;
+
         }
         .left {
           transform: rotateY(-90deg) translate3d(0, 0, 125px);
+          background-color: #4a96ad;
         }
         .right {
           transform: rotateY(90deg) translate3d(0, 0, 125px);
+          background-color: #67bcdb;
         }
         .top {
           transform: rotateX(90deg) translate3d(0, 0, 125px);
+          background-color: #73afad;
         }
         .bottom {
           transform: rotateX(-90deg) translate3d(0, 0, 125px);
+          background-color: #568d8a;
         }
       }
     }
