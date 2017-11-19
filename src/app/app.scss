@@ -1,8 +1,4 @@
-// TODO change this class
-// When we use this "library" into another project, we don't want to pollute the global rules. This is why we encapsulate
-// these rules.
 .angularjs-boilerplate {
-  // Border box everything as this is common sense!
   &, *, *:after, *:before {
     box-sizing: border-box;
   }

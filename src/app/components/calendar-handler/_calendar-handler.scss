@@ -28,27 +28,27 @@
 
       &:nth-child(2) {
         top: 50px;
-        background-color: #73afad;
+        background-color: #96848d ;
       }
       &:nth-child(4) {
         top: 100px;
-        background-color: #568d8a;
+        background-color: #6e7a93;
       }
       &:nth-child(6) {
         top: 150px;
-        background-color: #a2ab58;
+        background-color: #8f99a1;
       }
       &:nth-child(8) {
         top: 200px;
-        background-color: #005a31;
+        background-color: #d6d6d6;
       }
       &:nth-child(10) {
         top: 250px;
-        background-color: #4a96ad;
+        background-color: #0c8f99;
       }
       &:nth-child(12) {
         top: 300px;
-        background-color: #67bcdb;
+        background-color: #7e7b7c;
       }
     }
 
@@ -74,28 +74,28 @@
         .front {
           transform: translate3d(0, 0, 125px);
           z-index: 2;
-          background-color: #a2ab58;
+          background-color: #8f99a1;
         }
         .back {
           transform: rotateY(180deg) translate3d(0, 0, 125px);
-          background-color: #005a31;
+          background-color: #d6d6d6;
 
         }
         .left {
           transform: rotateY(-90deg) translate3d(0, 0, 125px);
-          background-color: #4a96ad;
+          background-color: #0c8f99;
         }
         .right {
           transform: rotateY(90deg) translate3d(0, 0, 125px);
-          background-color: #67bcdb;
+          background-color: #7e7b7c;
         }
         .top {
           transform: rotateX(90deg) translate3d(0, 0, 125px);
-          background-color: #73afad;
+          background-color: #96848d ;
         }
         .bottom {
           transform: rotateX(-90deg) translate3d(0, 0, 125px);
-          background-color: #568d8a;
+          background-color: #6e7a93;
         }
       }
     }
